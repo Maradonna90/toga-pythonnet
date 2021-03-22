@@ -3,5 +3,6 @@ import app
 
 
 def main():
-    appl = app.HelloApp
+    print("Start Main!")
+    appl = app.HelloApp()
     tpa.WinformsProactorEventLoop().run_forever(appl)
