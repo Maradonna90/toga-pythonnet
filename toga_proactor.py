@@ -1,12 +1,14 @@
 import clr
-SWF = clr.AddReference("System.Windows.Forms")
+import ctypes
+clr.AddReference("System.Windows.Forms")
 import asyncio
 import sys
 import threading
 from asyncio import events
-
-from System.Windows.Forms import Action, Task, WinForms, user32
-
+from System.Threading.Tasks import Task
+import System.Windows.Forms as WinForms
+from System import Action
+user32 = ctypes.windll.user32
 
 class AsyncIOTickMessageFilter(WinForms.IMessageFilter):
     """
