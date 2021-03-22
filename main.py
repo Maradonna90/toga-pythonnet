@@ -12,3 +12,6 @@ def main():
     asyncio.set_event_loop(loop)
     print("Start Forever Loop")
     loop.run_forever(app_context)
+
+if __name__ == '__main__':
+    main()
