@@ -32,7 +32,7 @@ class App:
         self.native = WinForms.Application
         self.app_context = WinForms.ApplicationContext()
         print("Start Forever Loop")
-        self.loop.run_forever(self.app_context)
+        # self.loop.run_forever(self.app_context)
 
     def exit(self):
         self.native.Exit()
