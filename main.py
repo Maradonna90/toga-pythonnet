@@ -4,6 +4,7 @@ import clr
 clr.AddReference("System.Windows.Forms")
 import System.Windows.Forms as WinForms
 from System import Threading
+from handlers import wrapped_handler
 
 # TODO: Figure out the function call tree for an WindowsApp and recreate.
 # 1. App.__init__
@@ -34,8 +35,8 @@ class App:
         self.native = WinForms.Application
         self.app_context = WinForms.ApplicationContext()
         print("Start Forever Loop")
-        self.loop.call_soon_threadsafe(self.do_generator)
-        self.loop.call_later(5, self.exit)
+        self.loop.call_later(1, wrapped_handler(self.do_generator))
+        self.loop.call_later(10, self.exit)
         # self.loop.run_forever(self.app_context)
 
     def do_generator(self):
