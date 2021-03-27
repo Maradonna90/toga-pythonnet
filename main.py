@@ -48,4 +48,4 @@ class App:
 
     def exit(self):
         print("EXIT!")
-        self.loop.call_later(5, self.loop.stop())
+        self.loop.call_later(5, self.loop.stop)
