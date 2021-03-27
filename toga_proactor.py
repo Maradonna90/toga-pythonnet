@@ -33,6 +33,7 @@ class AsyncIOTickMessageFilter(WinForms.IMessageFilter):
 
 class WinformsProactorEventLoop(asyncio.ProactorEventLoop):
     def run_forever(self, app_context):
+        print("YOOOOO")
         """Set up the asyncio event loop, integrate it with the Winforms
         event loop, and start the application.
 
