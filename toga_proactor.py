@@ -119,7 +119,7 @@ class WinformsProactorEventLoop(asyncio.ProactorEventLoop):
         # Application thread.
 
         if self.task:
-            self.task.Dispose()
+            # self.task.Dispose()
             del self.task
         # The message is sent with:
         # * HWND 0xfff (all windows),
