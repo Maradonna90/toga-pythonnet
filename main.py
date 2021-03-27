@@ -4,7 +4,6 @@ import clr
 clr.AddReference("System.Windows.Forms")
 import System.Windows.Forms as WinForms
 from System import Threading
-from toga.handlers import wrapped_handler
 
 # TODO: Figure out the function call tree for an WindowsApp and recreate.
 # 1. App.__init__
