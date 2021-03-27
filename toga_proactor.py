@@ -103,6 +103,7 @@ class WinformsProactorEventLoop(asyncio.ProactorEventLoop):
         WinForms.Application.Run(self.app_context)
 
     def enqueue_tick(self):
+        print("ENQUE TICK!")
         # Queue a call to tick in 5ms.
         self.task = Action[Task](self.tick)
         Task.Delay(5).ContinueWith(self.task)
