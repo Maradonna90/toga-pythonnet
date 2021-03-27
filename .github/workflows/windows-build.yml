@@ -27,4 +27,4 @@ jobs:
         python -m pip install pythonnet
     - name: Run tests with pytest
       run: |
-        python -m main.py
+        python -m main
