@@ -35,7 +35,7 @@ class App:
         self.app_context = WinForms.ApplicationContext()
         print("Start Forever Loop")
         self.loop.call_soon_threadsafe(self.do_generator)
-        self.exit()
+        self.loop.call_later(5, self.exit)
         # self.loop.run_forever(self.app_context)
 
     def do_generator(self):
@@ -48,4 +48,4 @@ class App:
 
     def exit(self):
         print("EXIT!")
-        self.loop.call_later(5, self.loop.stop)
+        self.loop.stop())
