@@ -36,7 +36,7 @@ class App:
         print("Start Forever Loop")
         self.loop.call_soon_threadsafe(self.do_generator)
         self.exit()
-        self.loop.run_forever(self.app_context)
+        # self.loop.run_forever(self.app_context)
 
     def do_generator(self):
         "A generator-based handler"
