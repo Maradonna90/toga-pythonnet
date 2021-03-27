@@ -35,8 +35,8 @@ class App:
         self.native = WinForms.Application
         self.app_context = WinForms.ApplicationContext()
         print("Start Forever Loop")
-        self.loop.call_later(1, wrapped_handler(self.do_generator))
-        self.loop.call_later(10, self.exit)
+        self.loop.call_soon(wrapped_handler(self.do_generator))
+        self.loop.call_soon(self.exit)
         self.loop.run_forever(self.app_context)
 
     def do_generator(self):
