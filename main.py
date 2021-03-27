@@ -50,3 +50,6 @@ class App:
     def exit(self):
         print("EXIT!")
         self.loop.stop()
+
+if __name__ == "__main__":
+    App().create()
