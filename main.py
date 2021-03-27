@@ -33,7 +33,6 @@ class App:
         print("RUN")
         self.native = WinForms.Application
         self.app_context = WinForms.ApplicationContext()
-        self.native.ApplicationExit += self.winforms_application_exit
         print("Start Forever Loop")
         self.loop.call_soon_threadsafe(self.do_generator)
         self.exit()
